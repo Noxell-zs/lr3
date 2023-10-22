@@ -10,14 +10,14 @@ stages:
     outs:
     - path: model/model1.keras
       hash: md5
-      md5: 0e5897a26b40664bd8ae07690ba7c34d
+      md5: 35e1650e36ba42644d1638a71cbc8184
       size: 319129368
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: model/model1.keras
       hash: md5
-      md5: 0e5897a26b40664bd8ae07690ba7c34d
+      md5: 35e1650e36ba42644d1638a71cbc8184
       size: 319129368
     - path: src/evaluate.py
       hash: md5
@@ -26,5 +26,5 @@ stages:
     outs:
     - path: metrics/accuracy1.txt
       hash: md5
-      md5: a2050fb47457cad479059a543ee35cab
+      md5: 740ba97e10c9a9d5bae2f2fa02335c6c
       size: 18
