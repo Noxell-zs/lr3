@@ -39,21 +39,25 @@ model = Sequential((
            input_shape=(128,128,3),
            activation='relu'),
     MaxPool2D(2,2),
+    Dropout(0.3),
 
     Conv2D(128,
            kernel_initializer='he_normal',
            kernel_size=(3,3),
            activation='relu'),
     MaxPool2D(2,2),
+    Dropout(0.3),
 
     Conv2D(256,
            kernel_initializer='he_normal',
            kernel_size=(3,3),
            activation='relu'),
     MaxPool2D(2,2),
+    Dropout(0.5),
 
     Flatten(),
     Dense(512,activation='relu'),
+    Dense(1024,activation='relu'),
     Dense(2,activation='softmax')
 ))
 
