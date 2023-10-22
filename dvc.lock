@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: src/train.py
+      hash: md5
+      md5: ab781e65af09b559aa483d32fba7f740
+      size: 1706
+    outs:
+    - path: model/model1.keras
+      hash: md5
+      md5: 808cc3380faa63d21b2d857b5e55867a
+      size: 39267568
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: model/model1.keras
+      hash: md5
+      md5: 808cc3380faa63d21b2d857b5e55867a
+      size: 39267568
+    - path: src/evaluate.py
+      hash: md5
+      md5: 898180145622f0bed7821207276d97d2
+      size: 564
+    outs:
+    - path: metrics/accuracy1.txt
+      hash: md5
+      md5: 6304ddf3477c1ae4ba75e3216ada3670
+      size: 17

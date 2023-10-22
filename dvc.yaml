@@ -1,0 +1,15 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - src/train.py
+    outs:
+    - model/model1.keras
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - model/model1.keras
+    - src/evaluate.py
+    metrics:
+    - metrics/accuracy1.txt:
+        cache: false
