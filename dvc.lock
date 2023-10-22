@@ -5,20 +5,20 @@ stages:
     deps:
     - path: src/train.py
       hash: md5
-      md5: 533c0ac242fc092b186830543fc3c128
-      size: 1937
+      md5: 8f01402b298ab2ffe9a24f08fa1dc594
+      size: 1844
     outs:
     - path: model/model1.keras
       hash: md5
-      md5: 35e1650e36ba42644d1638a71cbc8184
-      size: 319129368
+      md5: 50506c6b13233d205064321b6b1cbd76
+      size: 312803968
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: model/model1.keras
       hash: md5
-      md5: 35e1650e36ba42644d1638a71cbc8184
-      size: 319129368
+      md5: 50506c6b13233d205064321b6b1cbd76
+      size: 312803968
     - path: src/evaluate.py
       hash: md5
       md5: 898180145622f0bed7821207276d97d2
@@ -26,5 +26,5 @@ stages:
     outs:
     - path: metrics/accuracy1.txt
       hash: md5
-      md5: 740ba97e10c9a9d5bae2f2fa02335c6c
+      md5: 8b79efc05bdd274d38f73ca09442d927
       size: 18
